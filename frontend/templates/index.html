@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>BinGenius</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div style="text-align: center">
+      <h2>BinGenius</h2>
+      Image Classifier
+    </div>
+
+    <div class="box">
+      <form
+        class="p-3 text-center"
+        action="/"
+        ,
+        method="post"
+        enctype="multipart/form-data" 
+      >
+        <input type="file" name="imagefile" class="form-control" />
+        <button type="submit" class="btn btn-primary mt-3" value="Predict Image">Predict</button>
+      </form>
+
+      {% if prediction %}
+      <div class="text-center">
+        <h3>Prediction</h3>
+        <p>{{ prediction }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
